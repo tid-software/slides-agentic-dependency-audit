@@ -213,10 +213,19 @@ A **skill** is a markdown file (`SKILL.md`) that tells GitHub Copilot how to do 
 </div>
 </div>
 
-> Think of it like onboarding documentation —  
-> but your agent reads it and actually follows it.
+<!-- Speaker notes: This is the key insight. Skills aren't magic — they're just well-written instructions. -->
 
-<!-- Speaker notes: This is the key insight. Skills aren't magic — they're just well-written instructions. The agent reads them the same way a new developer would read a runbook. The difference is the agent actually does it. -->
+---
+<!-- _footer: "" -->
+<!-- _class: lead invert -->
+
+![bg right:60%](img/hide_the_pain_harold.jpg)
+
+
+> Think of it like onboarding documentation:
+> except your agent actually follows it.
+
+<!-- Speaker notes: The agent reads Skill the same way a new developer would read documentation. The key difference is the agent actually does.  -->
 
 ---
 
