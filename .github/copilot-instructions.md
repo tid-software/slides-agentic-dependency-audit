@@ -17,6 +17,17 @@ When writing or editing slides, always favour business-outcome language over tec
 | Licence metadata unknown | Legal exposure — we may be using code under terms we haven't agreed to |
 | Health grade (A–F) | A single, scannable signal of overall solution hygiene suitable for a status dashboard |
 
+### Memes are encouraged
+
+Memes are a legitimate presentation tool. A well-chosen meme placed alongside a key point:
+- Provides instant emotional context that words alone cannot
+- Makes the slide memorable — audiences recall images far better than bullet points
+- Signals confidence and approachability in a speaker
+
+When selecting a meme, pick one that is **universally recognisable** (readable from the back of a room), **directly reinforces the point on the slide** (not just decoration), and **won't alienate the audience**. Store meme images in `slides/img/` and reference them as `bg right` or `bg left` backgrounds to juxtapose with the slide content.
+
+Instruct the user what meame to search for and download; dont assume that you will be able to download it yoruself due to all sorts of issues
+
 ### Messaging principles
 
 - **Lead with outcomes, not metrics.** "No known security vulnerabilities" is more meaningful to a product owner than "0 CVEs found".
