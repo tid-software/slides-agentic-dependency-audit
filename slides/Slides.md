@@ -236,15 +236,8 @@ A **skill** is a markdown file (`SKILL.md`) that tells GitHub Copilot how to do 
 
 ## When Does a Skill Get Invoked?
 
-<div class="mermaid">
-flowchart LR
-    A[👤 Developer prompt] --> B{Does it mention\na known topic?}
-    B -->|Yes| C[Agent finds\nmatching SKILL.md]
-    B -->|No| D[Agent uses\ngeneral knowledge]
-    C --> E[Agent reads skill\nfrontmatter + content]
-    E --> F[Agent follows\nthe skill's workflow]
-    F --> G[✅ Consistent,\nguided output]
-</div>
+![bg height:15cm right:60%](img/when-does-a-skill-get-involved.png)
+
 
 <!-- Speaker notes: The matching is semantic, not keyword-based. If you ask "can you audit our dependencies", Copilot recognises this matches the nuget-audit-orchestrator skill description and loads it automatically. You don't have to say "use skill X". -->
 
@@ -286,9 +279,6 @@ description: >
 4. Formats a structured report
 5. Suggests fixes from its training
 
-**No C# code. No plugins.**  
-Just instructions the agent follows.
-
 </div>
 </div>
 
@@ -296,20 +286,43 @@ Just instructions the agent follows.
 
 ---
 
-## Learn More: GitHub Copilot Agent Mode
+## Learn More: GitHub Copilot Skill, Agents an More
 
 | Resource | Link |
-|----------|------|
+| --- | --- |
 | 🤖 GitHub Copilot Agent Mode | `github.com/features/copilot/agent-mode` |
 | 📄 Custom Instructions | `docs.github.com/en/copilot/customizing-copilot` |
 | 🛠️ Copilot Coding Agent | `docs.github.com/en/copilot/using-github-copilot/using-copilot-coding-agent` |
-| 📦 Skills / Prompt Files | `docs.github.com/en/copilot/customizing-copilot/adding-repository-custom-instructions` |
-| 🏫 GitHub Copilot Docs | `docs.github.com/en/copilot` |
-
-> All resources are **GitHub Copilot** specific — no third-party AI required.
+| 📦 awesome-copilot project | `https://github.com/github/awesome-copilot/` |
 
 <!-- Speaker notes: These are the official GitHub docs. Bookmark the custom instructions page in particular — that's where the skill system described today lives. -->
 
+---
+
+<!-- _class: lead invert -->
+
+  ![bg fit right:50%](img/grus-plan.jpg)
+
+## ⚠️ A Friendly PSA
+
+> A skill file is **executable code in a trench coat**.
+> Read the skill. Know the skill. Trust the skill.
+
+<!-- Speaker notes: This is the one serious moment in a funny slide. Skills are just markdown — but markdown that tells an agent to run shell commands IS executable code. The agent has no scepticism. It will do exactly what the skill says. If someone hands you a skill file from the internet, read it. Every line. -->
+
+---
+<!-- _footer: "" -->
+<!-- _class: lead invert -->
+
+![bg right:60%]()
+
+
+> Think of it like onboarding documentation:
+> except your agent actually follows it.
+
+<!-- Speaker notes: The agent reads Skill the same way a new developer would read documentation. The key difference is the agent actually does.  -->
+
+---
 ---
 
 <!-- _class: lead -->
@@ -808,4 +821,18 @@ Questions?
 
 <i class="fa-brands fa-github"></i> `github.com/YOUR-ORG/nuget-audit-skills`  
 <i class="fa fa-window-maximize"></i> Slides live on GitHub Pages post-talk
+:
+
+
+
+
+
+
+
+
+
+
+
+
+
 
