@@ -64,10 +64,20 @@ This is the messaging that we tell our costomers; our ops team spends hours manu
 </div>
 </div>
 
+
+<!-- Speaker notes: This is the hidden cost. Every time a customer asks "are we keeping on top of our dependencies?", someone on our ops team manually assembles the answer. It takes hours. It's inconsistent. And by the time the report lands in an inbox, some of it is already out of date. -->
+
+---
+<!-- _paginate: skip -->
+<!-- _footer: "" -->
+<!-- _class: lead -->
+
+![bg right:40%](img/this-is-fine.jpeg)
+
 > This isn't a one-off task — it's a recurring obligation  
 > that nobody has time to do properly.
 
-<!-- Speaker notes: This is the hidden cost. Every time a customer asks "are we keeping on top of our dependencies?", someone on our ops team manually assembles the answer. It takes hours. It's inconsistent. And by the time the report lands in an inbox, some of it is already out of date. -->
+<!-- Speaker notes: so to smmary; everybodody is busy doing all the things  . -->
 
 ---
 
@@ -104,6 +114,15 @@ No answer to **"should I be worried?"**
 </div>
 </div>
 
+<!-- Speaker notes: This is the second problem. Even when someone runs the audit, the output is written for engineers. A product owner reading "74 of 115 packages outdated, 12 pre-release, 0 CVEs" has no idea whether to raise this with the board or ignore it. The numbers don't tell a story — they're just numbers. Our job is to turn the numbers into a narrative that drives the right decision. -->
+
+---
+
+<!-- _footer: "" -->
+<!-- _class: lead -->
+
+![bg right:40%](img/confused_math_lady_meme.jpg)
+
 > The data exists. The story doesn't.  
 > Translating one into the other is the gap.
 
@@ -139,6 +158,23 @@ No answer to **"should I be worried?"**
 </div>
 
 <!-- Speaker notes: These are real numbers — from a real solution we audited this week. The drift isn't catastrophic yet, but the trajectory matters. Each release cycle that passes without housekeeping makes the next one harder. -->
+
+---
+<!-- _footer: "" -->
+<!-- _class: lead invert -->
+
+![bg left:40%](img/disaster_girl_meame.webp)
+
+## TL;DR
+
+The solution is **not on fire**.
+
+But someone left the stove on,  
+the smoke alarm is beeping,  
+and everyone is too busy shipping  
+to check what's burning.
+
+<!-- Speaker notes: This is the TL;DR. Not a crisis — but the early signs of one. The good news is we caught it. The better news is we can fix it. -->
 
 ---
 
