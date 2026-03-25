@@ -2,7 +2,7 @@
 marp: true
 theme: custom-default
 paginate: true
-footer: 'https://github.com/tid-software/slides-agentic-dependency-audit'
+footer: ''
 math: mathjax
 ---
 
@@ -12,7 +12,7 @@ math: mathjax
 </script>
 
 <!-- _paginate: skip -->
-<!-- _footer: "" -->
+
 <!-- _class: lead -->
 
 # Feeding & Watering Your .NET Solution
@@ -24,6 +24,7 @@ AI-Assisted Dependency Auditing with GitHub Copilot Agent Skills
 <!-- Speaker notes: Welcome. Today we're going to talk about a problem every .NET team has but rarely talks about — dependency drift. We're going to look at how we used GitHub Copilot's agentic capabilities to automate a full dependency audit, and we'll share the real results from a non trivial solution. -->
 
 ---
+
 
 <!-- _class: lead invert -->
 
@@ -40,6 +41,8 @@ This is the messaging that we tell our costomers; our ops team spends hours manu
 
 ---
 
+
+
 ## The Manual Audit Problem
 
 <div class="columns">
@@ -47,7 +50,7 @@ This is the messaging that we tell our costomers; our ops team spends hours manu
 
 ### Where the data lives
 
-- `dotnet list package` — version numbers only
+- `dotnet list package` — version numbers
 - NuGet registry API — licence, age, downloads
 - GitHub / source repos — maintainer health
 - CVE databases — security advisories
@@ -63,7 +66,7 @@ This is the messaging that we tell our costomers; our ops team spends hours manu
 - Stale before it's finished
 - No consistent format or scoring
 - Impossible to repeat reliably
-- Scales poorly — 76 projects × 115 packages
+- Scales poorly — 76 projects × 115 packages for the demo 
 - Different engineer, different result
 
 </div>
@@ -74,7 +77,7 @@ This is the messaging that we tell our costomers; our ops team spends hours manu
 
 ---
 <!-- _paginate: skip -->
-<!-- _footer: "" -->
+
 <!-- _class: lead -->
 
 ![bg right:40%](img/meames/this-is-fine.jpeg)
@@ -82,7 +85,7 @@ This is the messaging that we tell our costomers; our ops team spends hours manu
 > This isn't a one-off task — it's a recurring obligation  
 > that nobody has time to do properly.
 
-<!-- Speaker notes: so to smmary; everybodody is busy doing all the things  . -->
+<!-- Speaker notes: so to smmary; everybodody is busy doing all the things. -->
 
 ---
 
@@ -119,19 +122,19 @@ No answer to **"should I be worried?"**
 </div>
 </div>
 
-<!-- Speaker notes: This is the second problem. Even when someone runs the audit, the output is written for engineers. A product owner reading "74 of 115 packages outdated, 12 pre-release, 0 CVEs" has no idea whether to raise this with the board or ignore it. The numbers don't tell a story — they're just numbers. Our job is to turn the numbers into a narrative that drives the right decision. -->
+<!-- Speaker notes: This is the second problem. Even when someone does an audit, the output is written for engineers. A product owner reading "74 of 115 packages outdated, 12 pre-release, 0 CVEs" has no idea whether to raise this with the board or ignore it. The numbers don't tell a story. -->
 
 ---
 
-<!-- _footer: "" -->
+
 <!-- _class: lead -->
 
-![bg right:40%](img/meames/confused_math_lady.jpg)
+![bg right:40%](img/meames/confused-math-lady.jpg)
 
 > The data exists. The story doesn't.  
 > Translating one into the other is the gap.
 
-<!-- Speaker notes: This is the second problem. Even when someone runs the audit, the output is written for engineers. A product owner reading "74 of 115 packages outdated, 12 pre-release, 0 CVEs" has no idea whether to raise this with the board or ignore it. The numbers don't tell a story — they're just numbers. Our job is to turn the numbers into a narrative that drives the right decision. -->
+<!-- Speaker notes: they're just numbers. Our job is to turn the numbers into a narrative that drives the correct decision. -->
 
 ---
 
@@ -162,13 +165,13 @@ No answer to **"should I be worried?"**
 </div>
 </div>
 
-<!-- Speaker notes: These are real numbers — from a real solution we audited this week. The drift isn't catastrophic yet, but the trajectory matters. Each release cycle that passes without housekeeping makes the next one harder. -->
+<!-- Speaker notes: These are real numbers — from a real solution I audited weeks ago. The drift isn't catastrophic yet, but its the trajectory matters. Each release cycle that passes without housekeeping makes the next one harder. -->
 
 ---
-<!-- _footer: "" -->
+
 <!-- _class: lead invert -->
 
-![bg left:40%](img/meames/disaster_girl.webp)
+![bg left:40%](img/meames/disaster-girl.webp)
 
 ## TL;DR
 
@@ -179,7 +182,7 @@ the smoke alarm is beeping,
 and everyone is too busy shipping  
 to check what's burning.
 
-<!-- Speaker notes: This is the TL;DR. Not a crisis — but the early signs of one. The good news is we caught it. The better news is we can fix it. -->
+<!-- Speaker notes: its not a crisis — but the it is the arly signs of one. The good news is we caught it. The better news is we can fix it. -->
 
 ---
 
@@ -218,13 +221,13 @@ A **skill** is a markdown file (`SKILL.md`) that tells GitHub Copilot how to do 
 </div>
 </div>
 
-<!-- Speaker notes: This is the key insight. Skills aren't magic — they're just well-written instructions. -->
+<!-- Speaker notes: This is the key thing to understand. Skills aren't magic — they're just well-written instructions. -->
 
 ---
-<!-- _footer: "" -->
+
 <!-- _class: lead invert -->
 
-![bg right:60%](img/meames/hide_the_pain_harold.jpg)
+![bg right:50%](img/meames/hide-the-pain-harold.jpg)
 
 
 > Think of it like onboarding documentation:
@@ -295,7 +298,7 @@ description: >
 | 🛠️ Copilot Coding Agent | `docs.github.com/en/copilot/using-github-copilot/using-copilot-coding-agent` |
 | 📦 awesome-copilot project | `https://github.com/github/awesome-copilot/` |
 
-<!-- Speaker notes: These are the official GitHub docs. Bookmark the custom instructions page in particular — that's where the skill system described today lives. -->
+<!-- Speaker notes: Here is a wall of links. Bookmark the custom instructions page in particular — that's where the skill system described today lives. -->
 
 ---
 
@@ -311,19 +314,6 @@ description: >
 <!-- Speaker notes: This is the one serious moment in a funny slide. Skills are just markdown — but markdown that tells an agent to run shell commands IS executable code. The agent has no scepticism. It will do exactly what the skill says. If someone hands you a skill file from the internet, read it. Every line. -->
 
 ---
-<!-- _footer: "" -->
-<!-- _class: lead invert -->
-
-![bg right:60%]()
-
-
-> Think of it like onboarding documentation:
-> except your agent actually follows it.
-
-<!-- Speaker notes: The agent reads Skill the same way a new developer would read documentation. The key difference is the agent actually does.  -->
-
----
----
 
 <!-- _class: lead -->
 
@@ -334,7 +324,7 @@ description: >
 
 ## What We Built: `nuget-audit-*`
 
-Six self-contained skills. Zero external dependencies. Runs entirely from the `dotnet` CLI.
+Six self-contained skills. Zero external dependencies.
 
 | Skill | Role |
 |-------|------|
@@ -344,8 +334,6 @@ Six self-contained skills. Zero external dependencies. Runs entirely from the `d
 | `nuget-audit-packages` | NuGet metadata: version, licence, age, complexity |
 | `nuget-audit-risk` | CVEs, abandonment signals, community health |
 | `nuget-audit-report` | Merges JSON → customer-facing markdown report |
-
-> 6 skills · 11 files · ~1,500 lines of markdown instructions
 
 <!-- Speaker notes: Each skill is completely standalone. Discovery doesn't know about risk. Risk doesn't know about the report. The orchestrator is the only one that knows the full picture. This makes them composable and reusable. -->
 
@@ -368,215 +356,9 @@ flowchart TD
 
 ---
 
-## Platform Health: Grade A ✅
+## Demo : Example Report
 
-| Metric | Value |
-|--------|-------|
-| Target Framework | `net10.0` |
-| Release Type | **LTS** |
-| Released | 2025-11-11 |
-| End of Support | **2028-11-14** |
-| Days Until EOL | ~985 |
-| Projects | 76 of 76 |
-| Status | ✅ **Current** |
-
-> The solution is fully migrated to modern .NET — no .NET Framework projects remain.  
-> ~2.7 years of platform support ahead.
-
-<!-- Speaker notes: The great news first. They're on a current LTS, fully migrated. No platform action needed for nearly three years. This is where we should start the customer conversation — on a positive. -->
-
----
-
-## The Dependency Landscape
-
-<div class="columns">
-<div>
-
-### Direct packages: **115**
-
-| Delta | Count |
-|-------|-------|
-| ✅ Current | 41 |
-| 🔷 Patch | 29 |
-| 🔶 Minor | 29 |
-| 🔺 Major | 16 |
-| Pre-release | 12 |
-
-</div>
-<div>
-
-### Complexity breakdown
-
-| Complexity | Count |
-|------------|-------|
-| NONE | 41 |
-| LOW | 29 |
-| MEDIUM | 29 |
-| HIGH | 16 |
-
-**260 transitive packages**  
-(managed automatically — 0 CVEs)
-
-</div>
-</div>
-
-<!-- Speaker notes: 41 packages are already at latest. The majority of outdated ones are patch or minor — those are quick wins. The 16 major upgrades are the ones that need thought. -->
-
----
-
-## Risk Breakdown
-
-<div class="columns">
-<div>
-
-### 🟢 The good news
-
-| Signal | Status |
-|--------|--------|
-| Security vulnerabilities | **0** |
-| Deprecated packages | **0** |
-| .NET Framework projects | **0** |
-| EOL platform | **0** |
-
-The security posture is **clean**.
-
-</div>
-<div>
-
-### 🟡 The watch list
-
-| Risk | Count |
-|------|-------|
-| 🔴 CRITICAL | 0 |
-| 🟠 HIGH | 1 |
-| 🟡 MEDIUM | 83 |
-| 🟢 LOW | 16 |
-| ⚪ INFO | 15 |
-
-83 MEDIUM = version drift + pre-release + unknown licences
-
-</div>
-</div>
-
-<!-- Speaker notes: Zero CVEs is genuinely good news and should be front-and-centre. The 83 MEDIUM items sound alarming but most are a combination of version drift, unknown licence metadata, and wide blast radius. They're manageable. -->
-
----
-
-## Pre-release Packages in Production
-
-<!-- _class: small -->
-
-12 packages running non-stable versions — including **unofficial branch builds**:
-
-| Package | Installed | Stable Available? |
-|---------|-----------|-----------------|
-| `Serilog.Sinks.OpenTelemetry` | `4.2.1-nblumhardt-02317` | ⚠️ Unofficial personal branch |
-| `MassTransit` | `9.0.0-develop.23` | ✅ `9.0.1` available |
-| `MassTransit.EntityFrameworkCore` | `9.0.0-develop.23` | ✅ `9.0.1` available |
-| `MassTransit.RabbitMQ` | `9.0.0-develop.23` | ✅ `9.0.1` available |
-| `Metalama.Extensions.DependencyInjection` | `2026.0.5-preview` | ✅ `2026.0.16` available |
-| `Azure.Storage.Blobs` | `12.27.0-beta.1` | ✅ `12.27.0` available |
-| `Microsoft.Data.SqlClient` | `7.0.0-preview2.25289.6` | ❌ No stable yet |
-| `OpenTelemetry.Instrumentation.*` | `1.x-beta.1` | ❌ No stable yet |
-
-<!-- Speaker notes: The Serilog one is the most concerning. nblumhardt is the author's GitHub username — this is a personal branch build that was never released as an official stable version. It carries no stability guarantees and could be removed from NuGet at any time. MassTransit is simpler — stable is available, just needs upgrading. -->
-
----
-
-## Notable Flags
-
-<div class="columns">
-<div>
-
-### 🔺 coverlet.collector
-
-**Installed**: `6.0.4`  
-**Latest**: `8.0.0`  
-**Gap**: 2 major versions  
-**Impact**: Test infrastructure only
-
-> Code coverage may report  
-> incorrectly on .NET 10
-
-**Upgrade effort**: 1–2 days  
-(validation-heavy, not code-heavy)
-
-</div>
-<div>
-
-### ❓ Unknown licences
-
-~30 packages return no `licenseExpression`  
-from the NuGet registry API.
-
-**Microsoft packages** → MIT by policy  
-(embedded in nuspec, not API field)
-
-**Non-Microsoft packages** → manual  
-verification needed:
-- `AutoBogus`
-- `JsonApiSerializer`
-- `Bogus`, `OneOf`, `Moq`...
-
-</div>
-</div>
-
-<!-- Speaker notes: The coverlet gap is annoying but low-risk in terms of production impact. The licence unknowns are a compliance concern — not a security one, but something legal may care about. -->
-
----
-
-## The Cost of Delay
-
-<!-- _class: invert -->
-
-> Each release cycle that passes without updating  
-> turns a **patch bump** into a **minor bump**,  
-> and a minor bump into a **major**.
-
-| Today | In 12 months (if ignored) |
-|-------|--------------------------|
-| 74 packages need updating | 90+ packages need updating |
-| Most are patch/minor | Major bumps multiply |
-| ~5–10 day effort | Multi-sprint initiative |
-| One PR per family | Breaking changes compound |
-
-**The upgrade tax is always cheaper now than later.**
-
-<!-- Speaker notes: This is the pull-through argument. It's not that the work is urgent today — it's that the work gets harder every sprint you skip it. Patch bumps become minor bumps. Minor bumps become major bumps. Major bumps come with breaking changes that interact with each other. -->
-
----
-
-## Recommended Remediation Roadmap
-
-<!-- _class: small -->
-
-| # | Action | Effort | Risk Reduction |
-|---|--------|--------|----------------|
-| 1 | Replace `Serilog.Sinks.OpenTelemetry` unofficial build | < 1 day | 🔴 High |
-| 2 | Upgrade MassTransit family to stable `9.0.1` | 1 day | 🟠 High |
-| 3 | Stabilise remaining pre-release packages | 1–2 days | 🟡 Medium |
-| 4 | `coverlet.collector` 6 → 8 major upgrade | 1–2 days | 🟡 Medium |
-| 5 | Patch/minor hygiene sweep (Microsoft.*, Aspire.*, EF Core) | 1–2 days | 🟢 Low |
-| 6 | Verify licence compliance for unknown-licence packages | 0.5 day | 📋 Compliance |
-
-**Total estimated effort: ~5–10 days**
-
-> 💡 Steps 1–3 are the highest value. Steps 4–6 are hygiene — schedule as a recurring cadence.
-
----
-
-## Overall Health Grade: **C**
-
-<!-- _class: lead -->
-
-> **Platform**: A&ensp;·&ensp;**Security**: A&ensp;·&ensp;**Packages**: C
-
-The foundation is strong. The housekeeping is overdue.  
-The remediation path is clear and bounded.
-
-**This is a solvable problem — and the cost is known.**
-
-<!-- Speaker notes: Grade C is not a failing grade. It means: good bones, some technical debt, clear path to improvement. The security A and platform A are the things to celebrate. The C is the opportunity. -->
+ ![bg fit right:50%](img/meames/buzlightyear-demo-time.jpg)
 
 ---
 
@@ -614,8 +396,6 @@ The agent is excellent at **reasoning** but inconsistent at **determinism**.
 </div>
 </div>
 
-> Tools make the agent **precise** where it is currently **approximate**.
-
 <!-- Speaker notes: This is the pattern we see over and over with agentic AI. The reasoning is strong, the data retrieval is weak. The solution is to give the agent tools — small, focused programs that return reliable data. -->
 
 ---
@@ -634,8 +414,7 @@ A single-file C# app (`LicenceResolver.cs`):
 2. Strips HTML, extracts licence text
 3. Returns structured JSON — agent summarises in plain English
 
-**Why it matters**: ~30 packages in the audit had `licenseUrl` but no `licenseExpression`.  
-The agent had to guess. This tool would give it facts.
+**Why it matters**: ~30 packages in the audit had `licenseUrl` but no `licenseExpression`. 
 
 <!-- Speaker notes: Single-file C# with dotnet-script means no project files, no compilation step. The agent calls it like any shell command and gets structured output back. -->
 
@@ -750,10 +529,19 @@ The human role was:
 3. **Make design decisions when asked** — *"prefix: nuget-audit-; private feed: assume CLI configured"*
 4. **Review and approve** — read the output, verify it made sense, move on
 
+<!-- Speaker notes: This is the uncomfortable admission and the important one. I didn't hand-craft these skill files.  -->
+
+---
+<!-- _paginate: skip -->
+
+<!-- _class: lead -->
+
+![bg right:40%](img/meames/this-is-fine.jpeg)
+
 > The agent wrote the runbooks.  
 > The human wrote the brief.
 
-<!-- Speaker notes: This is the uncomfortable admission and the important one. We didn't hand-craft these skill files. We described what we needed and the agent produced them. We reviewed them. They were good. -->
+<!-- Speaker notes: All i did was describe what I needed and the agent produced it and I reviewed it. -->
 
 ---
 
@@ -761,50 +549,45 @@ The human role was:
 
 This deck was drafted by **GitHub Copilot** from:
 
-- The audit output (`nuget-audit-report.md`)
 - The session history (conversation turns with the agent)
 - The Marp template conventions (from `.github/agents/marp.md`)
-- The feedback you gave during planning
+- The feedback the Human gave during planning
 
 The human role was to **guide the narrative** across four planning rounds:
 
 1. *"Add a primer on what skills are"*
-2. *"Audience are developers unfamiliar with agentic tools"*
+2. *"Add an act on what we built"*
 3. *"Add an act on what we'd build next"*
-4. *"Disclose that AI wrote everything — and add the promise of a public repo"*
+4. *"Disclose that AI wrote everything"*
 
-<!-- Speaker notes: The meta point: even this disclosure slide was written by the agent. The planning conversation shaped the content. The agent executed. This is the pattern. -->
+<!-- Speaker notes: The meta point: even this disclosure slide was written by the agent. The planning conversation shaped the content. The agent executed. This is the pattern . -->
 
 ---
 
-<!-- _paginate: skip -->
-<!-- _footer: "" -->
+<!-- _pudiginate: skip -->
+
 <!-- _class: lead invert -->
 
-## Our Role as Developers
+## Our Role as Developers is Changing
 
 > We don't write the code.  
-> **We write the brief.**  
+> We understand the business; **We write the brief.**  
 > We approve the work.
-
-Understand the **business outcome**.  
-Guide the **agent toward it**.  
-Review, steer, and ship.
+> We ship
 
 ---
 
 <!-- _paginate: skip -->
-<!-- _footer: "" -->
+
 <!-- _class: lead -->
 
-# Coming Soon
+# Github
 
-The `nuget-audit-*` skills and this presentation will be published to a **public GitHub repo**.
-
-The deck will be **live on GitHub Pages** — Marp renders to HTML, deployed by a GitHub Actions workflow — shortly after this talk - and yes that was vibecoded as well :P
+The `nuget-audit-*` skills and this presentation are published to a public reposiory, and live on Github Pages.
 
 ```
-github.com/YOUR-ORG/nuget-audit-skills
+Repository: github.com/tid-software/slides-agentic-dependency-audit
+Sldes: tid-software.github.io/slides-agentic-dependency-audit
 ```
 
 ![bg right opacity:0.4](https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=800)
@@ -812,16 +595,13 @@ github.com/YOUR-ORG/nuget-audit-skills
 ---
 
 <!-- _paginate: skip -->
-<!-- _footer: "" -->
+
 <!-- _class: lead invert -->
 
 # <!--fit--> Thank You
 
 Questions?
 
-<i class="fa-brands fa-github"></i> `github.com/YOUR-ORG/nuget-audit-skills`  
-<i class="fa fa-window-maximize"></i> Slides live on GitHub Pages post-talk
-:
 
 
 
