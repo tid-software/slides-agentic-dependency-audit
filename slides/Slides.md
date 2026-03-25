@@ -2,7 +2,7 @@
 marp: true
 theme: custom-default
 paginate: true
-footer: 'github.com/YOUR-ORG/nuget-audit-skills'
+footer: 'https://github.com/tid-software/slides-agentic-dependency-audit'
 math: mathjax
 ---
 
@@ -16,7 +16,7 @@ AI-Assisted Dependency Auditing with GitHub Copilot Agent Skills
 
 ![bg right opacity:0.6](https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800)
 
-<!-- Speaker notes: Welcome. Today we're going to talk about a problem every .NET team has but rarely talks about — dependency drift. We're going to look at how we used GitHub Copilot's agentic capabilities to automate a full dependency audit, and we'll share the real results from a production solution. -->
+<!-- Speaker notes: Welcome. Today we're going to talk about a problem every .NET team has but rarely talks about — dependency drift. We're going to look at how we used GitHub Copilot's agentic capabilities to automate a full dependency audit, and we'll share the real results from a non trivial solution. -->
 
 ---
 
@@ -27,7 +27,11 @@ AI-Assisted Dependency Auditing with GitHub Copilot Agent Skills
 > Every week you ship without upgrading your dependencies,  
 > the cost of catching up **compounds**.
 
-<!-- Speaker notes: Here's the uncomfortable truth. Dependencies drift. Not because anyone decides to let them drift — it just happens. Releases ship, the backlog fills up, and before long you're two major versions behind on something critical. And when you finally have to deal with it, it's not one upgrade — it's ten, and they interact. -->
+<!-- Speaker notes: Here's the uncomfortable truth. Dependencies drift. Not because anyone decides to let them drift — it just happens. Releases ship, the backlog fills up, and before long you're two major versions behind on something critical. And when you finally have to deal with it, it's not one upgrade — it's ten, and they interact. 
+
+This is the messaging that we tell our costomers; our ops team spends hours manualy pullingtogether depenency information into a cohesive message to deliver our customers.
+
+-->
 
 ---
 
