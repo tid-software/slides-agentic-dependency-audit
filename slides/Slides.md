@@ -35,6 +35,82 @@ This is the messaging that we tell our costomers; our ops team spends hours manu
 
 ---
 
+## The Manual Audit Problem
+
+<div class="columns">
+<div>
+
+### Where the data lives
+
+- `dotnet list package` — version numbers only
+- NuGet registry API — licence, age, downloads
+- GitHub / source repos — maintainer health
+- CVE databases — security advisories
+- EOL calendars — platform support windows
+- Licence texts — compliance verification
+
+</div>
+<div>
+
+### What it costs
+
+- Hours of copy-paste per solution
+- Stale before it's finished
+- No consistent format or scoring
+- Impossible to repeat reliably
+- Scales poorly — 76 projects × 115 packages
+- Different engineer, different result
+
+</div>
+</div>
+
+> This isn't a one-off task — it's a recurring obligation  
+> that nobody has time to do properly.
+
+<!-- Speaker notes: This is the hidden cost. Every time a customer asks "are we keeping on top of our dependencies?", someone on our ops team manually assembles the answer. It takes hours. It's inconsistent. And by the time the report lands in an inbox, some of it is already out of date. -->
+
+---
+
+## The Communication Gap
+
+<div class="columns">
+<div>
+
+### What the engineer sees
+
+```
+coverlet.collector 6.0.4 → 8.0.0
+MassTransit 9.0.0-develop.23
+74 / 115 packages outdated
+12 pre-release
+0 CVEs
+```
+
+Actionable — if you know what it means.
+
+</div>
+<div>
+
+### What the business hears
+
+- *"Some packages need updating"*
+- *"There are pre-release things"*
+- *"CVEs are fine"*
+- *"...so are we okay?"*
+
+No context. No priority.  
+No answer to **"should I be worried?"**
+
+</div>
+</div>
+
+> The data exists. The story doesn't.  
+> Translating one into the other is the gap.
+
+<!-- Speaker notes: This is the second problem. Even when someone runs the audit, the output is written for engineers. A product owner reading "74 of 115 packages outdated, 12 pre-release, 0 CVEs" has no idea whether to raise this with the board or ignore it. The numbers don't tell a story — they're just numbers. Our job is to turn the numbers into a narrative that drives the right decision. -->
+
+---
+
 ## What Does Drift Look Like?
 
 <div class="columns">
