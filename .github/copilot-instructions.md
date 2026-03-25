@@ -1,3 +1,35 @@
+## Presentation Context & Audience
+
+This slide deck demonstrates an agentic tool that audits NuGet package dependencies and support lifecycles across a .NET solution, then distils the findings into a single, business-readable report. The primary audience is **non-technical stakeholders** — product owners, delivery managers, and commercial decision-makers — who need to understand the health and risk posture of a software solution without requiring knowledge of package versioning, build tooling, or dependency graphs.
+
+### Translating technical concepts into business outcomes
+
+When writing or editing slides, always favour business-outcome language over technical jargon. The goal is to answer the question *"what does this mean for the product and the team?"* not *"what does the tool report?"*
+
+| Technical concept | Business framing |
+|---|---|
+| Package version drift | Compounding upgrade cost — the longer it waits, the more expensive it becomes |
+| CVE / security vulnerability | An active risk that could expose the product or customer data |
+| End-of-life platform target | The platform will stop receiving security patches on a known date |
+| Pre-release dependency in production | Unfinished third-party code is running in a live environment |
+| Major version gap | A breaking-change upgrade is required — higher effort, higher risk |
+| Blast radius (packages used by many projects) | A single change touches many parts of the product simultaneously |
+| Licence metadata unknown | Legal exposure — we may be using code under terms we haven't agreed to |
+| Health grade (A–F) | A single, scannable signal of overall solution hygiene suitable for a status dashboard |
+
+### Messaging principles
+
+- **Lead with outcomes, not metrics.** "No known security vulnerabilities" is more meaningful to a product owner than "0 CVEs found".
+- **Quantify the cost of inaction.** Every slide that highlights a risk should also communicate what happens if nothing is done.
+- **Use analogies where appropriate.** Dependency drift is like deferred maintenance on a building — acceptable in the short term, expensive when ignored.
+- **Avoid acronyms without explanation.** TFM, LTS, STS, CVE, EOL — spell them out or replace them with plain language on audience-facing slides.
+- **Confidence, not alarm.** The report is a tool for informed decision-making, not a crisis report. Frame findings as actionable, not catastrophic.
+- **One insight per slide.** Dense technical tables belong in speaker notes or appendices; the audience slide should carry a single clear message.
+
+---
+
+# MARP Specifics
+
 - All slides must be written in Markdown format and use the [Marp](https://marp.app/) framework.
 - Each slide deck must include the following frontmatter:
   ```yaml
