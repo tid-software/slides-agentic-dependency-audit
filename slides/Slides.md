@@ -6,6 +6,11 @@ footer: 'https://github.com/tid-software/slides-agentic-dependency-audit'
 math: mathjax
 ---
 
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true });
+</script>
+
 <!-- _paginate: skip -->
 <!-- _footer: "" -->
 <!-- _class: lead -->
@@ -72,7 +77,7 @@ This is the messaging that we tell our costomers; our ops team spends hours manu
 <!-- _footer: "" -->
 <!-- _class: lead -->
 
-![bg right:40%](img/this-is-fine.jpeg)
+![bg right:40%](img/meames/this-is-fine.jpeg)
 
 > This isn't a one-off task — it's a recurring obligation  
 > that nobody has time to do properly.
@@ -121,7 +126,7 @@ No answer to **"should I be worried?"**
 <!-- _footer: "" -->
 <!-- _class: lead -->
 
-![bg right:40%](img/confused_math_lady_meme.jpg)
+![bg right:40%](img/meames/confused_math_lady.jpg)
 
 > The data exists. The story doesn't.  
 > Translating one into the other is the gap.
@@ -163,7 +168,7 @@ No answer to **"should I be worried?"**
 <!-- _footer: "" -->
 <!-- _class: lead invert -->
 
-![bg left:40%](img/disaster_girl_meame.webp)
+![bg left:40%](img/meames/disaster_girl.webp)
 
 ## TL;DR
 
@@ -219,7 +224,7 @@ A **skill** is a markdown file (`SKILL.md`) that tells GitHub Copilot how to do 
 <!-- _footer: "" -->
 <!-- _class: lead invert -->
 
-![bg right:60%](img/hide_the_pain_harold.jpg)
+![bg right:60%](img/meames/hide_the_pain_harold.jpg)
 
 
 > Think of it like onboarding documentation:
@@ -243,10 +248,7 @@ flowchart LR
 
 <!-- Speaker notes: The matching is semantic, not keyword-based. If you ask "can you audit our dependencies", Copilot recognises this matches the nuget-audit-orchestrator skill description and loads it automatically. You don't have to say "use skill X". -->
 
-<script type="module">
-  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
-  mermaid.initialize({ startOnLoad: true });
-</script>
+
 
 ---
 
