@@ -9,7 +9,7 @@
 
 ## 1. Executive Summary
 
-The mgnz-stemuh solution targets **.NET 10.0 (LTS)** across all 76 projects — a strong foundation with
+The stemuh solution targets **.NET 10.0 (LTS)** across all 76 projects — a strong foundation with
 approximately **2.7 years of platform support remaining** (EOL: 2028-11-14). There are **no known security
 vulnerabilities** and **no deprecated packages**, which reflects well on the security hygiene of the solution.
 
@@ -31,7 +31,7 @@ makes the next upgrade harder and riskier.
 | LOW risk packages | 🟢 16 |
 | Transitive packages | 260 |
 
-> 💡 **Pull-through insight**: The cost of upgrading now is low — the team is on a current LTS platform,
+> 💡 **insight**: The cost of upgrading now is low — the team is on a current LTS platform,
 > security is clean, and most upgrades are patch/minor bumps. Delaying increases the risk that future breaking
 > changes compound, making a single "upgrade sprint" insufficient and requiring a longer remediation initiative.
 
