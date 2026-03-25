@@ -12,7 +12,40 @@ math: mathjax
 </script>
 
 <!-- _paginate: skip -->
+<!-- _class: lead -->
 
+## 👋 Hi, I'm Steven
+
+- **Potfolio Technical Lead** @ Capgemini  
+- *Previously:* Lead .NET Engineer @ Timely  
+- *Previously:* Technical Lead @ Capgemini   
+
+> ~21 years on the Microsoft stack more if you dare to count all the borderline things I wrote when younger.
+
+![bg right:40%](img/profile.jpg)
+
+<!-- Speaker notes: Quick intro. Steven Higgan; aka Stig (nothng to do with cars), Potfolio Technical Lead at Capgemini. Two decades on the Microsoft stack, based in Dunedin, New Zealand.-->
+
+---
+
+<!-- _paginate: skip -->
+<!-- _class: lead -->
+
+Got into programming **to avoid people**.  
+Now spends most of his time mentoring people. 🙃
+
+Writes C# professionally. Also writes `code` at home. *There literlly is no escape.*
+
+Builds miltary miniatures; astrophotography mainly to compete with his 16yo daughter.  
+Known to ocassionaly lose at Age of Empires to his wife.
+
+
+<!-- Speaker notes:  Got into software development as a teenager to avoid social interaction — joke was very much on me as now spends most of my time talking to people and helping them grow. Outside of work: astrophotography, plastic miniatures, and losing at Age of Empires. Let's get into it. -->
+
+---
+
+
+<!-- _paginate: skip -->
 <!-- _class: lead -->
 
 # Feeding & Watering Your .NET Solution
@@ -24,7 +57,6 @@ AI-Assisted Dependency Auditing with GitHub Copilot Agent Skills
 <!-- Speaker notes: Welcome. Today we're going to talk about a problem every .NET team has but rarely talks about — dependency drift. We're going to look at how we used GitHub Copilot's agentic capabilities to automate a full dependency audit, and we'll share the real results from a non trivial solution. -->
 
 ---
-
 
 <!-- _class: lead invert -->
 
@@ -600,7 +632,11 @@ Sldes: tid-software.github.io/slides-agentic-dependency-audit
 
 # <!--fit--> Thank You
 
-Questions?
+Questions
+ea
+
+
+
 
 
 
