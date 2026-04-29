@@ -18,7 +18,7 @@ math: mathjax
 
 - **Potfolio Technical Lead** @ Capgemini  
 - *Previously:* Lead .NET Engineer @ Timely  
-- *Previously:* Technical Lead @ Capgemini   
+- *Previously:* Technical Lead @ Intergen/Capgemini   
 
 > ~21 years on the Microsoft stack more if you dare to count all the borderline things I wrote when younger.
 
@@ -38,6 +38,8 @@ Writes C# professionally. Also writes `code` at home. *There literlly is no esca
 
 Builds miltary miniatures; astrophotography mainly to compete with his 16yo daughter.  
 Known to ocassionaly lose at Age of Empires to his wife.
+
+> i use arch btw
 
 
 <!-- Speaker notes:  Got into software development as a teenager to avoid social interaction — joke was very much on me as now spends most of my time talking to people and helping them grow. Outside of work: astrophotography, plastic miniatures, and losing at Age of Empires. Let's get into it. -->
@@ -568,44 +570,14 @@ The human role was:
 
 <!-- _class: lead -->
 
-![bg right:40%](img/meames/this-is-fine.jpeg)
+![bg right:40%](img/meames/flashing-gremlin.jpg)
+
+# the dirty secret
 
 > The agent wrote the runbooks.  
 > The human wrote the brief.
 
 <!-- Speaker notes: All i did was describe what I needed and the agent produced it and I reviewed it. -->
-
----
-
-## AI Wrote This Presentation
-
-This deck was drafted by **GitHub Copilot** from:
-
-- The session history (conversation turns with the agent)
-- The Marp template conventions (from `.github/agents/marp.md`)
-- The feedback the Human gave during planning
-
-The human role was to **guide the narrative** across four planning rounds:
-
-1. *"Add a primer on what skills are"*
-2. *"Add an act on what we built"*
-3. *"Add an act on what we'd build next"*
-4. *"Disclose that AI wrote everything"*
-
-<!-- Speaker notes: The meta point: even this disclosure slide was written by the agent. The planning conversation shaped the content. The agent executed. This is the pattern . -->
-
----
-
-<!-- _pudiginate: skip -->
-
-<!-- _class: lead invert -->
-
-## Our Role as Developers is Changing
-
-> We don't write the code.  
-> We understand the business; **We write the brief.**  
-> We approve the work.
-> We ship
 
 ---
 
@@ -633,8 +605,6 @@ Sldes: tid-software.github.io/slides-agentic-dependency-audit
 # <!--fit--> Thank You
 
 Questions
-ea
-
 
 
 
