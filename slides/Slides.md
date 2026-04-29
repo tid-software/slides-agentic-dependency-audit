@@ -24,7 +24,7 @@ math: mathjax
 
 ![bg right:40%](img/profile.jpg)
 
-<!-- Speaker notes: Quick intro. Steven Higgan; aka Stig (nothng to do with cars), Potfolio Technical Lead at Capgemini. Two decades on the Microsoft stack, based in Dunedin, New Zealand.-->
+<!-- Quick intro. Steven Higgan; aka Stig (nothng to do with cars), Potfolio Technical Lead at Capgemini. Two decades on the Microsoft stack, based in Dunedin, New Zealand.-->
 
 ---
 
@@ -42,7 +42,7 @@ Known to ocassionaly lose at Age of Empires to his wife.
 > i use arch btw
 
 
-<!-- Speaker notes:  Got into software development as a teenager to avoid social interaction — joke was very much on me as now spends most of my time talking to people and helping them grow. Outside of work: astrophotography, plastic miniatures, and losing at Age of Empires. Let's get into it. -->
+<!-- Got into software development as a teenager to avoid social interaction — joke was very much on me as now spends most of my time talking to people and helping them grow. Outside of work: astrophotography, plastic miniatures, and losing at Age of Empires. Let's get into it. -->
 
 ---
 
@@ -56,7 +56,7 @@ AI-Assisted Dependency Auditing with GitHub Copilot Agent Skills
 
 ![bg right opacity:0.6](https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800)
 
-<!-- Speaker notes: Welcome. Today we're going to talk about a problem every .NET team has but rarely talks about — dependency drift. We're going to look at how we used GitHub Copilot's agentic capabilities to automate a full dependency audit, and we'll share the real results from a non trivial solution. -->
+<!-- Welcome. Today we're going to talk about a problem every .NET team has but rarely talks about — dependency drift. We're going to look at how we used GitHub Copilot's agentic capabilities to automate a full dependency audit, and we'll share the real results from a non trivial solution. -->
 
 ---
 
@@ -67,9 +67,10 @@ AI-Assisted Dependency Auditing with GitHub Copilot Agent Skills
 > Every week you ship without upgrading your dependencies,  
 > the cost of catching up **compounds**.
 
-<!-- Speaker notes: Here's the uncomfortable truth. Dependencies drift. Not because anyone decides to let them drift — it just happens. Releases ship, the backlog fills up, and before long you're two major versions behind on something critical. And when you finally have to deal with it, it's not one upgrade — it's ten, and they interact. 
-
-This is the messaging that we tell our costomers; our ops team spends hours manualy pullingtogether depenency information into a cohesive message to deliver our customers.
+<!-- 
+Here's the uncomfortable truth. Dependencies drift. Not because anyone decides to let them drift — it just happens. 
+Releases ship, the backlog fills up, and before long you're two major versions behind on something critical. 
+When you finally have to deal with it, it's not one upgrade — it's ten, and you are in hell. 
 
 -->
 
@@ -107,7 +108,10 @@ This is the messaging that we tell our costomers; our ops team spends hours manu
 </div>
 
 
-<!-- Speaker notes: This is the hidden cost. Every time a customer asks "are we keeping on top of our dependencies?", someone on our ops team manually assembles the answer. It takes hours. It's inconsistent. And by the time the report lands in an inbox, some of it is already out of date. -->
+<!-- 
+This is the hidden cost.
+Every time a customer asks "are we keeping on top of our dependencies?", someone on our ops team manually assembles the answer. 
+It takes hours. It's inconsistent. And by the time the report lands in an inbox, some of it is already out of date. -->
 
 ---
 <!-- _paginate: skip -->
@@ -119,7 +123,7 @@ This is the messaging that we tell our costomers; our ops team spends hours manu
 > This isn't a one-off task — it's a recurring obligation  
 > that nobody has time to do properly.
 
-<!-- Speaker notes: so to smmary; everybodody is busy doing all the things. -->
+<!-- PAUSE -->
 
 ---
 
@@ -156,7 +160,11 @@ No answer to **"should I be worried?"**
 </div>
 </div>
 
-<!-- Speaker notes: This is the second problem. Even when someone does an audit, the output is written for engineers. A product owner reading "74 of 115 packages outdated, 12 pre-release, 0 CVEs" has no idea whether to raise this with the board or ignore it. The numbers don't tell a story. -->
+<!-- 
+This is the second problem. 
+Even when someone does an audit, the output is written for engineers. 
+A product owner reading "74 of 115 packages outdated, 12 pre-release, 0 CVEs" has no idea whether to raise this with the board or ignore it.
+they dont tell a story. -->
 
 ---
 
@@ -168,7 +176,7 @@ No answer to **"should I be worried?"**
 > The data exists. The story doesn't.  
 > Translating one into the other is the gap.
 
-<!-- Speaker notes: they're just numbers. Our job is to turn the numbers into a narrative that drives the correct decision. -->
+<!-- they're just numbers. Our job is to turn the numbers into a narrative that drives to the correct destination. -->
 
 ---
 
@@ -199,7 +207,9 @@ No answer to **"should I be worried?"**
 </div>
 </div>
 
-<!-- Speaker notes: These are real numbers — from a real solution I audited weeks ago. The drift isn't catastrophic yet, but its the trajectory matters. Each release cycle that passes without housekeeping makes the next one harder. -->
+<!-- These are real numbers — from a real solution I audited weeks ago.
+The drift isn't catastrophic yet, but its the trajectory matters. 
+Each release cycle that passes without housekeeping makes the next one harder. -->
 
 ---
 
@@ -216,7 +226,7 @@ the smoke alarm is beeping,
 and everyone is too busy shipping  
 to check what's burning.
 
-<!-- Speaker notes: its not a crisis — but the it is the arly signs of one. The good news is we caught it. The better news is we can fix it. -->
+<!-- its not a crisis — but the it is the arly signs of one. The good news is we caught it. The better news is we can fix it. -->
 
 ---
 
@@ -255,7 +265,7 @@ A **skill** is a markdown file (`SKILL.md`) that tells GitHub Copilot how to do 
 </div>
 </div>
 
-<!-- Speaker notes: This is the key thing to understand. Skills aren't magic — they're just well-written instructions. -->
+<!-- This is the key thing to understand. Skills aren't magic — they're just well-written instructions. -->
 
 ---
 
@@ -267,7 +277,7 @@ A **skill** is a markdown file (`SKILL.md`) that tells GitHub Copilot how to do 
 > Think of it like onboarding documentation:
 > except your agent actually follows it.
 
-<!-- Speaker notes: The agent reads Skill the same way a new developer would read documentation. The key difference is the agent actually does.  -->
+<!-- The agent reads Skill the same way a new developer would read documentation. The key difference is the agent actually does.  -->
 
 ---
 
@@ -276,7 +286,7 @@ A **skill** is a markdown file (`SKILL.md`) that tells GitHub Copilot how to do 
 ![bg height:15cm right:60%](img/when-does-a-skill-get-involved.png)
 
 
-<!-- Speaker notes: The matching is semantic, not keyword-based. If you ask "can you audit our dependencies", Copilot recognises this matches the nuget-audit-orchestrator skill description and loads it automatically. You don't have to say "use skill X". -->
+<!-- The matching is semantic, not keyword-based. If you ask "can you audit our dependencies", Copilot recognises this matches the nuget-audit-orchestrator skill description and loads it automatically. You don't have to say "use skill X". -->
 
 
 
@@ -319,7 +329,7 @@ description: >
 </div>
 </div>
 
-<!-- Speaker notes: This is the beautiful simplicity of it. The skill author writes what they know — the commands, the logic, what good output looks like. The agent brings the execution and the reasoning. -->
+<!-- This is the beautiful simplicity of it. The skill author writes what they know — the commands, the logic, what good output looks like. The agent brings the execution and the reasoning. -->
 
 ---
 
@@ -332,7 +342,7 @@ description: >
 | 🛠️ Copilot Coding Agent | `docs.github.com/en/copilot/using-github-copilot/using-copilot-coding-agent` |
 | 📦 awesome-copilot project | `https://github.com/github/awesome-copilot/` |
 
-<!-- Speaker notes: Here is a wall of links. Bookmark the custom instructions page in particular — that's where the skill system described today lives. -->
+<!-- Here is a wall of links. Bookmark the custom instructions page in particular — that's where the skill system described today lives. -->
 
 ---
 
@@ -345,7 +355,7 @@ description: >
 > A skill file is **executable code in a trench coat**.
 > Read the skill. Know the skill. Trust the skill.
 
-<!-- Speaker notes: This is the one serious moment in a funny slide. Skills are just markdown — but markdown that tells an agent to run shell commands IS executable code. The agent has no scepticism. It will do exactly what the skill says. If someone hands you a skill file from the internet, read it. Every line. -->
+<!-- This is the one serious moment in a funny slide. Skills are just markdown — but markdown that tells an agent to run shell commands IS executable code. The agent has no scepticism. It will do exactly what the skill says. If someone hands you a skill file from the internet, read it. Every line. -->
 
 ---
 
@@ -369,7 +379,7 @@ Six self-contained skills. Zero external dependencies.
 | `nuget-audit-risk` | CVEs, abandonment signals, community health |
 | `nuget-audit-report` | Merges JSON → customer-facing markdown report |
 
-<!-- Speaker notes: Each skill is completely standalone. Discovery doesn't know about risk. Risk doesn't know about the report. The orchestrator is the only one that knows the full picture. This makes them composable and reusable. -->
+<!-- Each skill is completely standalone. Discovery doesn't know about risk. Risk doesn't know about the report. The orchestrator is the only one that knows the full picture. This makes them composable and reusable. -->
 
 ---
 
@@ -386,7 +396,7 @@ flowchart TD
     R --> REP
 </div>
 
-<!-- Speaker notes: Discovery runs first. Then platform, packages, and risk all run in parallel — they're independent. Finally the report skill merges all three JSON outputs into the final result. -->
+<!-- Discovery runs first. Then platform, packages, and risk all run in parallel — they're independent. Finally the report skill merges all three JSON outputs into the final result. -->
 
 ---
 
@@ -430,7 +440,7 @@ The agent is excellent at **reasoning** but inconsistent at **determinism**.
 </div>
 </div>
 
-<!-- Speaker notes: This is the pattern we see over and over with agentic AI. The reasoning is strong, the data retrieval is weak. The solution is to give the agent tools — small, focused programs that return reliable data. -->
+<!-- This is the pattern we see over and over with agentic AI. The reasoning is strong, the data retrieval is weak. The solution is to give the agent tools — small, focused programs that return reliable data. -->
 
 ---
 
@@ -450,7 +460,7 @@ A single-file C# app (`LicenceResolver.cs`):
 
 **Why it matters**: ~30 packages in the audit had `licenseUrl` but no `licenseExpression`. 
 
-<!-- Speaker notes: Single-file C# with dotnet-script means no project files, no compilation step. The agent calls it like any shell command and gets structured output back. -->
+<!-- Single-file C# with dotnet-script means no project files, no compilation step. The agent calls it like any shell command and gets structured output back. -->
 
 ---
 
@@ -474,7 +484,7 @@ A single-file C# app (`OssHealthChecker.cs`):
 | Contributors < 3 | +20 |
 | Open issues > 500 | +10 |
 
-<!-- Speaker notes: This replaces the current heuristic of "does the package seem popular?". The agent now gets a number with a breakdown. It can explain why a score is high or low rather than guessing. -->
+<!-- This replaces the current heuristic of "does the package seem popular?". The agent now gets a number with a breakdown. It can explain why a score is high or low rather than guessing. -->
 
 ---
 
@@ -493,7 +503,7 @@ A single-file C# app (`NuGetDownloadTrend.cs`):
 - A package with **50K downloads and growing** may be a rising replacement
 - The current audit had no way to distinguish — everything was "unknown adoption"
 
-<!-- Speaker notes: NuGet does expose download statistics through their API. This tool pulls the last 30 days vs the previous 30 days and computes a trend signal. Combined with the OSS Health score, you get a much richer picture of abandonment risk. -->
+<!-- NuGet does expose download statistics through their API. This tool pulls the last 30 days vs the previous 30 days and computes a trend signal. Combined with the OSS Health score, you get a much richer picture of abandonment risk. -->
 
 ---
 
@@ -541,7 +551,7 @@ When a package is risky:
 </div>
 </div>
 
-<!-- Speaker notes: These three skills extend the audit into compliance and security territory that the current skill set only touches on. nuget-audit-licences in particular is something every enterprise customer will ask for eventually. -->
+<!-- These three skills extend the audit into compliance and security territory that the current skill set only touches on. nuget-audit-licences in particular is something every enterprise customer will ask for eventually. -->
 
 ---
 
@@ -563,7 +573,7 @@ The human role was:
 3. **Make design decisions when asked** — *"prefix: nuget-audit-; private feed: assume CLI configured"*
 4. **Review and approve** — read the output, verify it made sense, move on
 
-<!-- Speaker notes: This is the uncomfortable admission and the important one. I didn't hand-craft these skill files.  -->
+<!-- This is the uncomfortable admission and the important one. I didn't hand-craft these skill files.  -->
 
 ---
 <!-- _paginate: skip -->
@@ -577,7 +587,7 @@ The human role was:
 > The agent wrote the runbooks.  
 > The human wrote the brief.
 
-<!-- Speaker notes: All i did was describe what I needed and the agent produced it and I reviewed it. -->
+<!-- All i did was describe what I needed and the agent produced it and I reviewed it. -->
 
 ---
 
